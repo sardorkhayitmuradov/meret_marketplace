@@ -18,23 +18,24 @@ module.exports = {
       xxl: "1376px"
     },
     fontSize: {
-      'xxs-regular': ['12px', '185%'],
-      'sm-regular': ['14px', '150%'],
-      'base-regular': ['16px', '135%'],
+      'xxs-regular': ['12px', '17px'],
+      'sm-regular': ['14px', '116%'],
+      'sm2-regular': ['14px', '160%'],
+      'base-regular': ['16px', '147%'],
       'md-regular': ['16px', '185%'],
-      'lg-regular': ['18px', '140%'],
+      'lg-regular': ['18px', '135%'],
 
       'sm-medium': ['14px', '135%'],
       'base-medium': ['16px', '135%'],
       'lg-medium': ['18px', '135%'],
 
-      'sm-semibold': ['14px', '135%'],
+      'sm-semibold': ['14px', '200%'],
       'lg-semibold': ['18px', '135%'],
       '3lg-semibold': ['36px', '135%'],
 
       'base-bold': ['16px', '135%'],
-      'lg-bold': ['20px', '135%'],
-      '2lg-bold': ['24px', '120%'],
+      'lg-bold': ['18px', '135%'],
+      '2lg-bold': ['24px', '33px'],
       '3xl-bold': ['36px', '135%'],
       '4xl-bold': ['40px', '135%'],
       '5xl-bold': ['42px', '135%'],
@@ -51,17 +52,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        "#1D1929": "#1D1929",
-        "#A5A3A9": "#A5A3A9",
-        "#E8E8EA": "#E8E8EA",
-        "#4C1D95": "#4C1D95",
-        "#5B21B6": "#5B21B6",
-        "#F8FAFC": "#F8FAFC",
-        "#0F172A": "#0F172A",
-        "#CBD5E1": "#CBD5E1",
-        "#475569": "#475569",
-        "#94A3B8": "#94A3B8",
-        "#F97316": "#F97316"
+        "Eerie-Black": "#1D1929",
+        "Midnight-Blue": "#0F172A",
+        "Greyish": "#A5A3A9",
+        "Slate": "#475569",
+        "Slate-Gray": "#94A3B8",
+        "Blue-Gray": "#CBD5E1",
+        "Gainsboro": "#E8E8EA",
+        "Ghost-White": "#F8FAFC",
+        "Indigo": "#4C1D95",
+        "Purple-Heart": "#5B21B6",
+        "Orange-Peel": "#F97316"
       },
       boxShadow: {
         'shadow-1': '0px 3.22197px 20.5411px rgba(94, 95, 96, 0.14)',

@@ -54,7 +54,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className='w-[65%]'>
+          <div className='max-w-[65%] w-full'>
             <h3 className='font-NunitoSansBold text-lg-bold mb-[24px] text-Midnight-Blue'>Stay in the loop</h3>
             <div className='flex justify-between w-full'>
               <p className='font-NunitoSansRegular text-sm2-regular max-w-[400px] w-full text-Slate'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating MERET NFT MERET.</p>
@@ -68,16 +68,189 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div>
-          <div>
-            <Link href={'/'}>
+        <div className='w-full flex justify-between'>
+          <div className='max-w-[35%] w-full'>
+            <Link href={'/'} className='mb-5'>
               <Image src={FooterLogo} className='mb-5' width={120} height={35} alt="My image" />
             </Link>
-            <h4 className='text-2lg-bold mb-6z text-Midnight-Blue font-NunitoSansBold'>MERET NFT Market Place</h4>
+            <h4 className='text-2lg-bold mb-6 text-Midnight-Blue font-NunitoSansBold'>MERET NFT Market Place</h4>
+            <p className='font-NunitoSansRegular mb-2 max-w-[370px] w-full inline-block text-sm2-regular text-Slate'>The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFT). Buy, sell, and discover exclusive digital items.</p>
+            <span className='font-NunitoSansRegular max-w-[370px] w-full inline-block text-sm2-regular text-Slate-Gray'>Copyright © 2022 NFT MERET NFT Market Place</span>
           </div>
 
-          <div>
-
+          <div className='max-w-[65%] w-full flex items-start justify-between'>
+            <ul>
+              <li className='mb-6'>
+                <Link href={'/'} className='font-NunitoSansBold text-lg-bold text-Midnight-Blue'>
+                  Market Place
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  All NFTs
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  New
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Art
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Sports
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Utility
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Music
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Domain Name
+                </Link>
+              </li>
+            </ul>
+            <ul>
+              <li className='mb-6'>
+                <Link href={'/'} className='font-NunitoSansBold text-lg-bold text-Midnight-Blue'>
+                  My Account
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Favorites
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Watchlist
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  My CollectionsStats
+                </Link>
+              </li>
+              <li className='mb-5'>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Settings
+                </Link>
+              </li>
+              <li>
+                <ul>
+                  <li className='mb-6'>
+                    <Link href={'/'} className='font-NunitoSansBold text-lg-bold text-Midnight-Blue'>
+                      Stats
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                      Stats
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                      Stats
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li className='mb-6'>
+                <Link href={'/'} className='font-NunitoSansBold text-lg-bold text-Midnight-Blue'>
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Platform
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Status
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Gas-Free Marketplace
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Taxes
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Docs
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Newsletter
+                </Link>
+              </li>
+            </ul>
+            <ul>
+              <li className='mb-6'>
+                <Link href={'/'} className='font-NunitoSansBold text-lg-bold text-Midnight-Blue'>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Ventures
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Grants
+                </Link>
+              </li>
+              <li>
+                <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
+                  Company
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

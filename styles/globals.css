@@ -4,41 +4,66 @@
 
 @layer base {
   @font-face {
-    font-family: 'NunitoSansRegular';
-    src: url('../public/fonts/NunitoSans_7pt/NunitoSans_7pt-Regular.ttf') format('truetype');
+    font-family: "NunitoSansRegular";
+    src: url("../public/fonts/NunitoSans_7pt/NunitoSans_7pt-Regular.ttf")
+      format("truetype");
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansSemiBold';
-    src: url('../public/fonts/NunitoSans_7pt/NunitoSans_7pt-SemiBold.ttf') format('truetype');
+    font-family: "NunitoSansSemiBold";
+    src: url("../public/fonts/NunitoSans_7pt/NunitoSans_7pt-SemiBold.ttf")
+      format("truetype");
     font-weight: 600;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansBold';
-    src: url('../public/fonts/NunitoSans_7pt/NunitoSans_7pt-Bold.ttf') format('truetype');
+    font-family: "NunitoSansBold";
+    src: url("../public/fonts/NunitoSans_7pt/NunitoSans_7pt-Bold.ttf")
+      format("truetype");
     font-weight: 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'NunitoSansExtraBold';
-    src: url('../public/fonts/NunitoSans_7pt/NunitoSans_7pt-ExtraBold.ttf') format('truetype');
+    font-family: "NunitoSansExtraBold";
+    src: url("../public/fonts/NunitoSans_7pt/NunitoSans_7pt-ExtraBold.ttf")
+      format("truetype");
     font-weight: 800;
     font-style: normal;
   }
 }
 
-*{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
 }
+
+.swiper-pagination {
+  width: 190px !important;
+}
+
+.swiper-pagination-bullet {
+  /* margin-top: 60px !important; */
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 1 !important;
+  background: #cbd5e1 !important;
+  transform: scale(1) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #5b21b6 !important;
+  width: 14px !important;
+  height: 14px !important;
+  transform: scale(1) !important;
+}
+

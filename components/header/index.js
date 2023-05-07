@@ -54,7 +54,7 @@ export const Header = () => {
           <div className='border border-Blue-Gray p-2 rounded-[12px] cursor-pointer'>
             <Image src={Settings} width={16} height={16} alt="settings" />
           </div>
-          <div cla>
+          <div>
             <Image src={User} width={48} height={48} alt="user" className='cursor-pointer' />
           </div>
           <div className='border border-Blue-Gray p-4 rounded-[12px] cursor-pointer'>

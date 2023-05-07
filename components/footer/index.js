@@ -161,12 +161,12 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
-                      Stats
+                      Rankings
                     </Link>
                   </li>
                   <li>
                     <Link href={'/'} className='font-NunitoSansSemiBold text-Slate text-sm-semibold'>
-                      Stats
+                      Activity
                     </Link>
                   </li>
                 </ul>

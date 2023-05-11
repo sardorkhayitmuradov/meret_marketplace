@@ -17,8 +17,8 @@ export default function TimeSwitcher({className, options, onChange }) {
     };
 
     return (
-        <div className='relative cursor-pointer font-NunitoSansBold text-base-medium text-tonal-600 ml-auto w-fit' onClick={toggleDropdown} >
-            <div className='flex p-2 text-Purple-Heart '>
+        <div className='relative cursor-pointer w-fit right-0 font-NunitoSansBold text-base-medium text-tonal-600' onClick={toggleDropdown} >
+            <div className='flex p-2 text-violet-800'>
                 {selectedOption.label}
                 {
                     isOpen ? <Image src={switchIcon} alt='switch moder' className='ml-3 rotate-180 duration-300' /> : <Image src={switchIcon} width={15} height={15} alt='switch moder' className='ml-3 duration-300' />

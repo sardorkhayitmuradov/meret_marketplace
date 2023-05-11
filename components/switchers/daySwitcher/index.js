@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import switchIcon from '../../../public/images/down.svg';
 
-export default function TimeSwitcher({ options, onChange }) {
+export default function TimeSwitcher({className, options, onChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -17,7 +17,7 @@ export default function TimeSwitcher({ options, onChange }) {
     };
 
     return (
-        <div className='relative cursor-pointer w-fit right-0 font-NunitoSansBold text-base-medium text-tonal-600' onClick={toggleDropdown} >
+        <div className='relative cursor-pointer font-NunitoSansBold text-base-medium text-tonal-600 ml-auto w-fit' onClick={toggleDropdown} >
             <div className='flex p-2 text-Purple-Heart '>
                 {selectedOption.label}
                 {

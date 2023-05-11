@@ -224,8 +224,8 @@ export default function Home() {
       </section>
       <section className="py-12">
         <div className="max-w-xl mx-auto w-full">
-          <div className="flex items-center justify-center">
-            <h2 className="font-NunitoSansBold text-center text-xl-bold text-Midnight-Blue">Top collections over</h2>
+          <div className="flex items-center justify-end">
+            <h2 className="font-NunitoSansBold text-xl-bold relative left-[calc(100%-60%)] text-center text-Midnight-Blue">Top collections over</h2>
             <TimeSwitcher options={options} onChange={handleOptionChange} />
           </div>
         </div>

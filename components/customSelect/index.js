@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const CustomSelect = ({ options, selectedOption, placeholder, setSelectedOption, selectWrapperClassName, selectHeaderClassName, selectContentWrapperClassName, selectContentClassName, arrowImage }) => {
+const CustomSelect = ({ options, selectedOption, placeholder, setSelectedOption, selectWrapperClassName, selectHeaderClassName, selectContentWrapperClassName, selectContentClassName, arrowImage, filterImage }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggling = () => setIsOpen(!isOpen);
@@ -17,7 +17,8 @@ const CustomSelect = ({ options, selectedOption, placeholder, setSelectedOption,
                 className={selectHeaderClassName}
                 onClick={toggling}
             >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between w-full">
+                    {filterImage && <Image src={filterImage} width={15} height={15} className={`cursor-pointer`} alt="arrow img" />}
                     {selectedOption || placeholder}
                     <Image src={arrowImage} width={20} height={20} className={`cursor-pointer duration-200 ${isOpen && "rotate-180"}`} alt="arrow img" />
                 </div>

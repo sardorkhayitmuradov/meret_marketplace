@@ -22,6 +22,7 @@ import Left from '../public/images/exploreLeft.svg'
 import ethereum from '../public/images/ethereum.svg'
 import heroVideo from '../public/images/videoBanner.svg'
 import VideoStarter from '../public/images/videoStarter.svg'
+import Link from "next/link.js";
 
 const options = [
   { value: '7', label: 'last 7 days' },
@@ -234,11 +235,11 @@ export default function Home() {
             <h2 className="font-NunitoSansBold text-xl-bold relative -left-[30%] text-slate-900">Top collections over</h2>
             <TimeSwitcher options={options} onChange={handleOptionChange} />
           </div>
-          <ul className="flex items-center flex-wrap gap-6 justify-between">
+          <div className="flex items-center flex-wrap gap-6 justify-between">
             {
               topCollections.map((tc) => {
                 return (
-                  <li key={tc.id} className="flex items-center gap-6 max-w-[563px] w-full">
+                  <Link href={'/rankings'} key={tc.id} className="flex items-center gap-6 max-w-[563px] w-full">
                     <p className="text-xs-regular font-NunitoSansBold text-slate-900">{tc.id}</p>
                     <div className="flex items-center gap-6 w-full">
                       <Image src={tc.image} width={48} height={48} alt='tc1' />
@@ -252,11 +253,11 @@ export default function Home() {
                       <p className="text-xs-bold font-NunitoSansSemiBold text-slate-400">{tc.ethereum}</p>
                     </div>
                     <p className="text-xl-medium text-orange-500 font-NunitoSansBold ml-6">{tc.changes}</p>
-                  </li>
+                  </Link>
                 )
               })
             }
-          </ul>
+          </div>
         </div>
       </section>
       <section className="py-10">
@@ -289,7 +290,7 @@ export default function Home() {
             {
               resources.map((r) => {
                 return (
-                  <li>
+                  <li key={r.id}>
                     <Image src={r.image} width={391} height={199} alt='res img' />
                   </li>
                 )

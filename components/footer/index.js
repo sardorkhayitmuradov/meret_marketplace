@@ -59,7 +59,7 @@ export const Footer = () => {
             <div className='flex justify-between w-full'>
               <p className='font-NunitoSansRegular text-sm-regular max-w-[400px] w-full text-slate-600'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating MERET NFT MERET.</p>
               <div className='border-slate-300 border-[2px] rounded-[12px] max-w-[364px] w-full flex items-center py-[7px] px-[6px] justify-between'>
-                <Input type={'text'} placeholder={'Enter your email address..'} nameValue={'filterProduct'} value={email} onGetValue={(e) => setEmail(e.target.value)} className={'py-3 px-2 outline-none w-full font-NunitoSansRegular mx-auto text-xxs-regular'} />
+                <Input type={'email'} placeholder={'Enter your email address..'} nameValue={'filterProduct'} value={email} onGetValue={(e) => setEmail(e.target.value)} className={'py-3 px-2 outline-none w-full font-NunitoSansRegular mx-auto text-xxs-regular'} />
                 <Button className={'rounded-[12px] max-w-[156px] w-full text-xxs-regular text-white font-NunitoSansRegular bg-violet-800 py-[15px] px-[34px]'}>
                   Subscibe Now
                 </Button>

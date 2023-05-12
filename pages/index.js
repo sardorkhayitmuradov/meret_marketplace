@@ -41,7 +41,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <main className="pt-24">
       <section className="pb-6">
         <Swiper
           pagination={{

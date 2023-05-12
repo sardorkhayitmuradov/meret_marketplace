@@ -59,12 +59,13 @@ module.exports = {
         "Eerie-Black": "#1D1929",
         "Greyish": "#A5A3A9",
         "Gainsboro": "#E8E8EA",
-
+        
         "slate-900": "#0F172A",
         "slate-600": "#475569",
         "slate-400": "#94A3B8",
         "slate-300": "#CBD5E1",
         "slate-50": "#F8FAFC",
+        "violet-800": "#5B21B6",
         "orange-500": "#F97316",
 
         "gray-50": "#F9FAFB",
@@ -102,7 +103,6 @@ module.exports = {
         "violet-500": "#8B5CF6",
         "violet-600": "#7C3AED",
         "violet-700": "#6D28D9",
-        "violet-800": "#5B21B6",
         "violet-900": "#4C1D95",
       },
       boxShadow: {

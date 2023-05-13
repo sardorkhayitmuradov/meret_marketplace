@@ -3,7 +3,8 @@ import Image from 'next/image'
 
 import Tab from '@/components/tab'
 import { Button } from '@/components/button'
-import { categories } from '@/constants/categories'
+import { categoriesKorean } from '@/constants/categoriesKorean'
+import { categoriesAlphabetical } from '@/constants/categoriesAlphabetical'
 import CardCollection from '@/components/cards/cardCollection'
 import { exploreCollections } from '@/constants/exploreCollections'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
@@ -21,7 +22,9 @@ import Left from '../public/images/exploreLeft.svg'
 
 export default function Masterpiece() {
     const swiperRef = useRef(null);
-    const [selectedTab, setSelectedTab] = useState('')
+    const [selectedTab, setSelectedTab] = useState('');
+    const [selectedTabKoreeanCategories, setSelectedTabKoreeanCategories] = useState('')
+    const [isKoreeanCategoriesOpen, setIsKoreeanCategoriesOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [hovered, setHovered] = useState(false);
 
@@ -29,7 +32,7 @@ export default function Masterpiece() {
         <main className="pt-20 pb-80">
             <section className="py-16">
                 <div className="mx-auto w-full max-w-xl">
-                    <h2 className="mb-8 text-center text-xl-bold font-NunitoSansBold text-slate-900">Masterpiece Collections</h2>
+                    <h2 className="mb-8 text-center text-xl-bold font-NunitoSansBold text-slate-900">Emerging Artists Collections</h2>
                     <div className='w-full relative mb-[72px]'>
                         <button onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()} className="custom-prev-btn border w-[53px] h-[53px] border-b-slate-300 p-2 rounded-[100%] flex items-center justify-center absolute z-10 -left-[2%] top-[50%] transform -translate-y-1/2 bg-white active:border-violet-800 duration-150">
                             <Image src={Left} width={12} height={16} alt="My image" />
@@ -64,12 +67,12 @@ export default function Masterpiece() {
                     </div>
                     <div className="scrollbar relative mb-14 flex h-[38px] w-full items-center gap-2">
                         <div
-                            onClick={() => setIsOpen(!isOpen)}
+                            onClick={() => setIsKoreeanCategoriesOpen(!isKoreeanCategoriesOpen)}
                             className="flex w-full max-w-[148px] cursor-pointer items-center gap-2 rounded-[12px] bg-violet-800 px-4 py-[11px] font-NunitoSansBold text-xs-medium text-white"
                         >
                             <Image
                                 src={dialog}
-                                className={`duration-200 ${isOpen && 'rotate-180'}`}
+                                className={`duration-200 ${isKoreeanCategoriesOpen && 'rotate-180'}`}
                                 width={24}
                                 height={24}
                                 alt="My image"
@@ -78,8 +81,41 @@ export default function Masterpiece() {
                         </div>
                         <div className="scrollbar absolute left-[160px] flex h-full w-full gap-2 overflow-x-scroll scroll-smooth">
                             <TransitionGroup className="scrollbar absolute flex h-full w-full gap-2 overflow-x-scroll scroll-smooth">
+                                {isKoreeanCategoriesOpen &&
+                                    categoriesKorean.map((tab, index) => (
+                                        <CSSTransition key={index} timeout={500} classNames="item">
+                                            <Tab
+                                                onClick={() => setSelectedTabKoreeanCategories(tab)}
+                                                className={`flex h-full cursor-pointer items-center justify-center whitespace-nowrap rounded-[12px] px-4 font-NunitoSansBold text-xs-medium duration-500 ${selectedTabKoreeanCategories === tab
+                                                    ? 'bg-violet-800 text-white'
+                                                    : 'bg-slate-50 text-slate-900'
+                                                    }`}
+                                            >
+                                                {tab}
+                                            </Tab>
+                                        </CSSTransition>
+                                    ))}
+                            </TransitionGroup>
+                        </div>
+                    </div>
+                    <div className="scrollbar relative mb-14 flex h-[38px] w-full items-center gap-2">
+                        <div
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="flex w-full justify-center max-w-[148px] cursor-pointer items-center gap-2 rounded-[12px] bg-violet-800 px-4 py-[11px] font-NunitoSansBold text-xs-medium text-white"
+                        >
+                            <Image
+                                src={dialog}
+                                className={`duration-200 ${isOpen && 'rotate-180'}`}
+                                width={24}
+                                height={24}
+                                alt="My image"
+                            />
+                            <p>영문</p>
+                        </div>
+                        <div className="scrollbar absolute left-[160px] flex h-full w-[86%] gap-2 overflow-x-scroll scroll-smooth">
+                            <TransitionGroup className="scrollbar absolute flex h-full w-full gap-2 overflow-x-scroll scroll-smooth">
                                 {isOpen &&
-                                    categories.map((tab, index) => (
+                                    categoriesAlphabetical.map((tab, index) => (
                                         <CSSTransition key={index} timeout={500} classNames="item">
                                             <Tab
                                                 onClick={() => setSelectedTab(tab)}

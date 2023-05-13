@@ -72,3 +72,28 @@ body {
 }
 
 
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.item-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.item-exit {
+  opacity: 1;
+}
+
+.item-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+

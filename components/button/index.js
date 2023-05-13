@@ -1,8 +1,13 @@
 import React from 'react'
 
-export const Button = ({ className , children }) => {
-
+export const Button = ({ className, onMouseEnter, onMouseLeave, children }) => {
     return (
-        <button className={className}>{children}</button>
+        <button
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            className={className}
+        >
+            {children}
+        </button>
     )
 }

@@ -46,6 +46,11 @@ export const Header = () => {
           <nav className='max-w-[492px] w-full'>
             <ul className='flex items-center justify-evenly w-full'>
               <li>
+                <Link href={'/masterpiece'} className='font-NunitoSansBold'>
+                  Masterpiece
+                </Link>
+              </li>
+              <li>
                 <Link href={'/explore'} className='font-NunitoSansBold'>
                   Explore
                 </Link>
@@ -86,7 +91,7 @@ export const Header = () => {
         </div>
       </header>
       {
-        menu && <Menu isVisible={menu} onChange={(value)=>setMenu(value)} />
+        menu && <Menu isVisible={menu} onChange={(value) => setMenu(value)} />
       }
     </>
   )

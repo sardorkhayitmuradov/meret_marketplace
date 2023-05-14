@@ -54,14 +54,29 @@ export default function Masterpiece() {
                             }}
                             className="mySwiper"
                         >
-                            <SwiperSlide className="pb-10">
+                            <SwiperSlide className="pb-10 relative">
                                 <Image src={SlideImage} width={1200} height={600} alt={"slideImage"} />
+                                <div className='absolute bottom-32 left-12'>
+                                    <h3 className='text-2xl-medium font-NunitoSansSemiBold text-white mb-[6px]'>마르크 샤갈 Marc Chagall</h3>
+                                    <p className='text-3xl-medium font-NunitoSansSemiBold text-white mb-[6px]'>Infinity-Nets (WFTO)</p>
+                                    <span className='text-md-semibold text-white font-NunitoSansBold'>oil on cotton</span>
+                                </div>
                             </SwiperSlide>
-                            <SwiperSlide className="pb-10">
+                            <SwiperSlide className="pb-10 relative">
                                 <Image src={SlideImage} width={1200} height={600} alt={"slideImage"} />
+                                <div className='absolute bottom-32 left-12'>
+                                    <h3 className='text-2xl-medium font-NunitoSansSemiBold text-white mb-[6px]'>마르크 샤갈 Marc Chagall</h3>
+                                    <p className='text-3xl-medium font-NunitoSansSemiBold text-white mb-[6px]'>Infinity-Nets (WFTO)</p>
+                                    <span className='text-md-semibold text-white font-NunitoSansBold'>oil on cotton</span>
+                                </div>
                             </SwiperSlide>
-                            <SwiperSlide className="pb-10">
+                            <SwiperSlide className="pb-10 relative">
                                 <Image src={SlideImage} width={1200} height={600} alt={"slideImage"} />
+                                <div className='absolute bottom-32 left-12'>
+                                    <h3 className='text-2xl-medium font-NunitoSansSemiBold text-white mb-[6px]'>마르크 샤갈 Marc Chagall</h3>
+                                    <p className='text-3xl-medium font-NunitoSansSemiBold text-white mb-[6px]'>Infinity-Nets (WFTO)</p>
+                                    <span className='text-md-semibold text-white font-NunitoSansBold'>oil on cotton</span>
+                                </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>

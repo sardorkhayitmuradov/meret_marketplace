@@ -63,14 +63,18 @@ export default function Home() {
                 </h2>
                 <p className="text-slate-600 font-NunitoSansSemiBold text-md-semibold mb-4">MERET Place is the world's first and largest NFT marketplace</p>
                 <div className="flex items-center gap-[14px] mb-8">
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
+                  <Link href={'/masterpiece'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
+                  <Link href={'/create'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 cursor-pointer">
                   <Image src={Video} width={33} height={33} alt="My image" />
@@ -88,14 +92,18 @@ export default function Home() {
                 </h2>
                 <p className="text-slate-600 font-NunitoSansSemiBold text-md-semibold mb-4">MERET Place is the world's first and largest NFT marketplace</p>
                 <div className="flex items-center gap-[14px] mb-8">
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
+                  <Link href={'/masterpiece'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
+                  <Link href={'/create'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 cursor-pointer">
                   <Image src={Video} width={33} height={33} alt="My image" />
@@ -113,14 +121,18 @@ export default function Home() {
                 </h2>
                 <p className="text-slate-600 font-NunitoSansSemiBold text-md-semibold mb-4">MERET Place is the world's first and largest NFT marketplace</p>
                 <div className="flex items-center gap-[14px] mb-8">
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
+                  <Link href={'/masterpiece'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
+                  <Link href={'/create'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 cursor-pointer">
                   <Image src={Video} width={33} height={33} alt="My image" />
@@ -138,14 +150,18 @@ export default function Home() {
                 </h2>
                 <p className="text-slate-600 font-NunitoSansSemiBold text-md-semibold mb-4">MERET Place is the world's first and largest NFT marketplace</p>
                 <div className="flex items-center gap-[14px] mb-8">
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
+                  <Link href={'/masterpiece'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
+                  <Link href={'/create'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 cursor-pointer">
                   <Image src={Video} width={33} height={33} alt="My image" />
@@ -163,14 +179,18 @@ export default function Home() {
                 </h2>
                 <p className="text-slate-600 font-NunitoSansSemiBold text-md-semibold mb-4">MERET Place is the world's first and largest NFT marketplace</p>
                 <div className="flex items-center gap-[14px] mb-8">
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
-                  <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-                    <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
-                    <Image src={ArrowRight} width={20} height={20} alt="My image" />
-                  </Button>
+                  <Link href={'/masterpiece'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
+                  <Link href={'/create'}>
+                    <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+                      <p className="font-NunitoSansBold text-xs-bold mr-3">Create</p>
+                      <Image src={ArrowRight} width={20} height={20} alt="My image" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 cursor-pointer">
                   <Image src={Video} width={33} height={33} alt="My image" />
@@ -188,10 +208,12 @@ export default function Home() {
             extraordinary
             <p>MERET NFT Market Place</p>
           </h3>
-          <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
-            <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
-            <Image src={ArrowRight} width={20} height={20} alt="My image" />
-          </Button>
+          <Link href={'/masterpiece'}>
+            <Button className={'bg-violet-800  text-white flex items-center p-4 justify-between rounded-[16px]'}>
+              <p className="font-NunitoSansBold text-xs-bold mr-3">Masterpiece</p>
+              <Image src={ArrowRight} width={20} height={20} alt="My image" />
+            </Button>
+          </Link>
         </div>
       </section>
       <section className="pt-7 pb-12">

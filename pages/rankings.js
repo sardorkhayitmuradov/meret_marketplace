@@ -64,7 +64,7 @@ export default function Rankings() {
                             <tr>
                                 <Tablehead
                                     scope={'col'}
-                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
+                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold pl-10 text-start'}
                                     title={'Collection'}
                                 />
                                 <Tablehead

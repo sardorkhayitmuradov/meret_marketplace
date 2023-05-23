@@ -59,7 +59,7 @@ export default function Rankings() {
                         />
                     </div>
 
-                    <Table className={'my-14'}>
+                    <Table className={'my-14 mr-5 ml-6'}>
                         <thead className='border-b border-slate-300'>
                             <tr>
                                 <Tablehead

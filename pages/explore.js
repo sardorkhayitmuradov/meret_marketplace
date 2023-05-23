@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 import Tab from '@/components/tab'
 import { Button } from '@/components/button'
@@ -7,14 +8,14 @@ import { categories } from '@/constants/categories'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import dialog from '../public/images/dialog.svg'
-import CardCollection from '@/components/cards/cardCollection'
 import { exploreCollections } from '@/constants/exploreCollections'
+
+const CardCollectionComponent = dynamic(() => import('@/components/cards/cardCollection'));
 
 export default function Explore() {
     const [selectedTab, setSelectedTab] = useState('')
     const [isOpen, setIsOpen] = useState(false);
     const [hovered, setHovered] = useState(false);
-    console.log(hovered)
 
     return (
         <main className="pt-20 pb-80">
@@ -59,7 +60,7 @@ export default function Explore() {
                         {exploreCollections.length > 0
                             ? exploreCollections.map(ec => {
                                 return (
-                                    <CardCollection
+                                    <CardCollectionComponent
                                         key={ec.id}
                                         isNew={ec.isNew}
                                         item={ec.item}

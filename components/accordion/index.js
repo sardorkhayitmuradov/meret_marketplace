@@ -11,19 +11,20 @@ const CustomAccordion = ({
   accordionHeaderClassName,
   accordionBodyClassname,
   accordionImage,
+  active,
   children,
 }) => {
   return (
     <>
       <Accordion
-        alwaysOpen={true}
         transition={{
-          duration: '300ms',
+          duration: '500ms',
+          transition: true,
           timingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
         }}
         className={`${accordionClassName}`}
       >
-        <AccordionItem>
+        <AccordionItem isActive={active ? active : false}>
           {({ open }) => (
             <>
               <AccordionHeader

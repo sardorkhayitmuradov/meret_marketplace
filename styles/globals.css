@@ -97,3 +97,23 @@ body {
   transition: opacity 300ms, transform 300ms;
 }
 
+canvas {
+  background-color: transparent;
+}
+
+canvas.myChart {
+  background-color: transparent;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: spinner 1.5s linear infinite;
+}

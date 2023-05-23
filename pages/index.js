@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useRef } from "react";
 import Image from "next/image";
+import dynamic from 'next/dynamic'
 import { Button } from "@/components/button";
-import TimeSwitcher from "@/components/switchers/daySwitcher/index.js";
 
 import { topCollections } from "@/constants/topCollections.js";
 import { resources } from "@/constants/resources.js";
@@ -23,6 +23,9 @@ import ethereum from '../public/images/ethereum.svg'
 import heroVideo from '../public/images/videoBanner.svg'
 import VideoStarter from '../public/images/videoStarter.svg'
 import Link from "next/link.js";
+
+
+const TimeSwitcherComponent = dynamic(() => import('@/components/switchers/daySwitcher/index.js'));
 
 const options = [
   { value: '7', label: 'last 7 days' },
@@ -255,7 +258,7 @@ export default function Home() {
         <div className="max-w-xl mx-auto w-full">
           <div className="flex items-center justify-end mb-12">
             <h2 className="font-NunitoSansBold text-xl-bold relative -left-[30%] text-slate-900">Top collections over</h2>
-            <TimeSwitcher options={options} onChange={handleOptionChange} />
+            <TimeSwitcherComponent options={options} onChange={handleOptionChange} />
           </div>
           <div className="flex items-center flex-wrap gap-6 justify-between">
             {

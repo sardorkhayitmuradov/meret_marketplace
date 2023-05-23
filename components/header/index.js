@@ -56,7 +56,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href={'/stats'} className='font-NunitoSansBold'>
+                <Link href={'/rankings'} className='font-NunitoSansBold'>
                   Stats
                 </Link>
               </li>

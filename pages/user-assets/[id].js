@@ -28,6 +28,7 @@ import down from '../../public/images/down-bigger.svg'
 import cancel from '../../public/images/cancel.svg'
 import { userCollections } from "@/constants/userCollections";
 import UserCardCollection from "@/components/cards/userCardCollection";
+import Link from "next/link";
 
 const options = ["All time", "Option 1", "Option 3"];
 
@@ -423,7 +424,8 @@ export default function UserAssets() {
                         {userCollections.length > 0
                             && userCollections.map(userProduct => {
                                 return (
-                                    <UserCardCollection
+                                    <Link href={"/user-assets/" + userProduct.id}>
+                                        <UserCardCollection
                                         key={userProduct.id}
                                         image={userProduct.image}
                                         name={userProduct.name}
@@ -433,6 +435,7 @@ export default function UserAssets() {
                                         date={userProduct.date}
                                         liked={userProduct.liked}
                                     />
+                                    </Link>
                                 )
                             })
                             }

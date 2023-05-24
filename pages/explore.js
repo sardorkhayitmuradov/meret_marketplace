@@ -9,6 +9,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import dialog from '../public/images/dialog.svg'
 import { exploreCollections } from '@/constants/exploreCollections'
+import Link from 'next/link'
 
 const CardCollectionComponent = dynamic(() => import('@/components/cards/cardCollection'));
 
@@ -60,14 +61,16 @@ export default function Explore() {
                         {exploreCollections.length > 0
                             ? exploreCollections.map(ec => {
                                 return (
-                                    <CardCollectionComponent
-                                        key={ec.id}
-                                        isNew={ec.isNew}
-                                        item={ec.item}
-                                        author={ec.author}
-                                        date={ec.date}
-                                        defination={ec.definition}
-                                    />
+                                    <Link href={`/user-items/` + ec.id}>
+                                        <CardCollectionComponent
+                                            key={ec.id}
+                                            isNew={ec.isNew}
+                                            item={ec.item}
+                                            author={ec.author}
+                                            date={ec.date}
+                                            defination={ec.definition}
+                                        />
+                                    </Link>
                                 )
                             })
                             : ''}

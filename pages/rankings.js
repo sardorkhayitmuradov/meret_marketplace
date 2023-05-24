@@ -4,6 +4,7 @@ import CustomSelect from '@/components/customSelect';
 import Table from '@/components/table';
 import Tablehead from '@/components/table/th';
 import Tabledata from '@/components/table/td';
+import Link from 'next/link';
 
 import { rankings } from '@/constants/rankings';
 
@@ -106,22 +107,26 @@ export default function Rankings() {
                                         <Tablehead
                                             className={'py-[15px]'}
                                         >
-                                            <div className='flex items-center gap-6'>
-                                                <p className='text-xs-regular text-slate-900 font-NunitoSansBold'>{ranking.id}</p>
-                                                <div className='flex items-center gap-4'>
-                                                    <Image src={ranking.collection.image} width={48} height={48} alt='eth' />
-                                                    <div className='flex flex-col items-start'>
-                                                        <p className='font-NunitoSansBold text-xs-regular text-slate-900'>{ranking.collection.name}</p>
-                                                        <p className='text-xxs-regular text-slate-400 font-NunitoSansBold'>{ranking.collection.author}</p>
+                                            <Link href={"/user-items/" + ranking.id}>
+                                                <div className='flex items-center gap-6'>
+                                                    <p className='text-xs-regular text-slate-900 font-NunitoSansBold'>{ranking.id}</p>
+                                                    <div className='flex items-center gap-4'>
+                                                        <Image src={ranking.collection.image} width={48} height={48} alt='eth' />
+                                                        <div className='flex flex-col items-start'>
+                                                            <p className='font-NunitoSansBold text-xs-regular text-slate-900'>{ranking.collection.name}</p>
+                                                            <p className='text-xxs-regular text-slate-400 font-NunitoSansBold'>{ranking.collection.author}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </Tablehead>
                                         <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-slate-400'} >
-                                            <div className='gap-[10px] flex items-center justify-center'>
-                                                <Image src={ethereum} width={13} height={18} alt='eth' />
-                                                {ranking.volume}
-                                            </div>
+                                            <Link href={"/user-items/" + ranking.id}>
+                                                <div className='gap-[10px] flex items-center justify-center'>
+                                                    <Image src={ethereum} width={13} height={18} alt='eth' />
+                                                    {ranking.volume}
+                                                </div>
+                                            </Link>
                                         </Tabledata >
                                         <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-orange-500'} text={`${ranking.day}%`} />
                                         <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-[#84CC16]'} text={`${ranking.week}%`} />

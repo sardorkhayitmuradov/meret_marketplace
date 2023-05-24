@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { exploreCollections } from "@/constants/exploreCollections";
 import { userCollections } from "@/constants/userCollections";
-import { rankings } from "@/constants/rankings";
+import { userSales } from "@/constants/userSales";
 import CustomSelect from "@/components/customSelect";
 import CustomAccordion from "@/components/accordion";
 import { Button } from "@/components/button";
@@ -11,6 +11,7 @@ import { Input } from "@/components/Input";
 import Table from "@/components/table";
 import Tablehead from "@/components/table/th";
 import Tabledata from "@/components/table/td";
+// import LoadingSpinner from "@/components/loadingSpinner";
 
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
@@ -27,11 +28,11 @@ import arrowDownBlack from '../../public/images/Icon-selector.svg'
 import doneWhite from '../../public/images/icon-left-white.svg'
 import doneBlack from '../../public/images/done-violet.svg'
 import downBig from '../../public/images/down-bigger.svg'
-// import LoadingSpinner from "@/components/loadingSpinner";
 import itemsNumber from '../../public/images/documents.svg'
 import search from '../../public/images/search-black.svg'
 import GridLine2 from '../../public/images/grid-4.svg'
 import GridLine3 from '../../public/images/grid-6.svg'
+import Link from "next/link";
 
 const options = ["All time", "Option 1", "Option 3"];
 
@@ -56,7 +57,7 @@ export async function getStaticProps({ params }) {
 
 export default function UserItems({ user }) {
     const [tab, setTab] = useState(1)
-    const [openMenu, setOpenMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(true)
     const [selectedOption, setSelectedOption] = useState(null);
     // const [isLoading, setIsLoading] = useState(false)
     const [searchItems, setSearchItems] = useState("");
@@ -396,7 +397,8 @@ export default function UserItems({ user }) {
                             {userCollections.length > 0
                                 && userCollections.map(userProduct => {
                                     return (
-                                        <UserCardCollection
+                                        <Link href={"/user-assets/" + userProduct.id}>
+                                            <UserCardCollection
                                             key={userProduct.id}
                                             image={userProduct.image}
                                             name={userProduct.name}
@@ -406,93 +408,88 @@ export default function UserItems({ user }) {
                                             date={userProduct.date}
                                             liked={userProduct.liked}
                                         />
+                                        </Link>
                                     )
                                 })
                             }
                         </ul> :
                             <>
-                                <div className="pt-[37px] pb-[53px] pl-8 pr-16 border-t max-w-[1000px] mx-auto w-full border-gray-200">
+                                <div className="pt-[37px] pb-[53px] pl-8 pr-16 border-t w-[90%] mx-auto border-gray-200">
                                     <canvas ref={chartRef} />
                                 </div>
-                                <Table className={'my-14'}>
-                                    <thead className='border-b border-slate-300'>
-                                        <tr>
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold pl-10 text-start'}
-                                                title={'Collection'}
-                                            />
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
-                                                title={'Volume'}
-                                            />
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
-                                                title={'24h %'}
-                                            />
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
-                                                title={'7d %'}
-                                            />
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
-                                                title={'Floor Price'}
-                                            />
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
-                                                title={'Owners'}
-                                            />
-                                            <Tablehead
-                                                scope={'col'}
-                                                className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
-                                                title={'Items'}
-                                            />
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {rankings.map((ranking) => {
-                                            return (
-                                                <tr key={ranking.id}>
-                                                    <Tablehead
-                                                        className={'py-[15px]'}
-                                                    >
-                                                        <div className='flex items-center gap-6'>
-                                                            <p className='text-xs-regular text-slate-900 font-NunitoSansBold'>{ranking.id}</p>
-                                                            <div className='flex items-center gap-4'>
-                                                                <Image src={ranking.collection.image} width={48} height={48} alt='eth' />
-                                                                <div className='flex flex-col items-start'>
-                                                                    <p className='font-NunitoSansBold text-xs-regular text-slate-900'>{ranking.collection.name}</p>
-                                                                    <p className='text-xxs-regular text-slate-400 font-NunitoSansBold'>{ranking.collection.author}</p>
+                                <div className="py-10 w-[90%] mx-auto">
+                                    <Table>
+                                        <thead className='border-b border-slate-300'>
+                                            <tr>
+                                                <Tablehead
+                                                    scope={'col'}
+                                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold pl-10 text-center'}
+                                                    title={'Item'}
+                                                />
+                                                <Tablehead
+                                                    scope={'col'}
+                                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
+                                                    title={'Price'}
+                                                />
+                                                <Tablehead
+                                                    scope={'col'}
+                                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
+                                                    title={'Quantity'}
+                                                />
+                                                <Tablehead
+                                                    scope={'col'}
+                                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
+                                                    title={'From'}
+                                                />
+                                                <Tablehead
+                                                    scope={'col'}
+                                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
+                                                    title={'To'}
+                                                />
+                                                <Tablehead
+                                                    scope={'col'}
+                                                    className={'text-md-semibold py-3 text-slate-900 font-NunitoSansSemiBold'}
+                                                    title={'Time'}
+                                                />
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {userSales.map((us) => {
+                                                return (
+                                                    <tr key={us.id}>
+                                                        <Tablehead
+                                                            className={'py-[15px]'}
+                                                        >
+                                                            <div className='flex items-center gap-6'>
+                                                                <p className='text-xs-regular text-slate-900 font-NunitoSansBold'>Sale</p>
+                                                                <div className='flex items-center gap-4'>
+                                                                    <Image src={us.item.image} width={48} height={48} alt='eth' />
+                                                                    <div className='flex flex-col items-start'>
+                                                                        <p className='font-NunitoSansBold text-xs-regular text-slate-900'>{us.item.name}</p>
+                                                                        <p className='text-xxs-regular text-slate-400 font-NunitoSansBold'>{us.item.author}</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </Tablehead>
-                                                    <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-slate-400'} >
-                                                        <div className='gap-[10px] flex items-center justify-center'>
-                                                            <Image src={ethereum} width={13} height={18} alt='eth' />
-                                                            {ranking.volume}
-                                                        </div>
-                                                    </Tabledata >
-                                                    <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-orange-500'} text={`${ranking.day}%`} />
-                                                    <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-[#84CC16]'} text={`${ranking.week}%`} />
-                                                    <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-slate-400'} >
-                                                        <div className='gap-[10px] flex items-center justify-center'>
-                                                            <Image src={ethereum} width={13} height={18} alt='eth' />
-                                                            {ranking.floorPrice}
-                                                        </div>
-                                                    </Tabledata >
-                                                    <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-slate-900'} text={ranking.owners} />
-                                                    <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-slate-900'} text={ranking.items} />
-                                                </tr>
-                                            );
-                                        })}
-                                    </tbody>
-                                </Table>
+                                                        </Tablehead>
+                                                        <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-lg-medium text-slate-900'} >
+                                                            <div className='gap-2 flex items-center'>
+                                                                <Image src={ethereum} width={13} height={18} alt='eth' />
+                                                                {us.price.cryptoCurrency}
+                                                            </div>
+                                                            <p className="text-xxs-regular text-start text-slate-400 font-NunitoSansSemiBold">${us.price.usd}</p>
+                                                        </Tabledata >
+                                                        <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-xs-regular text-slate-900'} text={`${us.quantity}`} />
+                                                        <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-xs-regular text-slate-900'} >
+                                                            {us.from}
+                                                        </Tabledata >
+                                                        <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-xs-regular text-slate-900'} text={us.to} />
+                                                        <Tabledata className={'text-center py-[15px] font-NunitoSansBold text-xs-regular text-slate-900'} text={us.date} />
+                                                    </tr>
+                                                );
+                                            })}
+                                        </tbody>
+                                    </Table>
+                                </div>
                             </>
                     }
                 </div>
